@@ -142,7 +142,7 @@
             margin-top: 20px;
         }
 
-        /* NEW: Force 4 cards in one row on large screens */
+        /* 4 cards in one row on large screens */
         @media (min-width: 900px) {
             .stem-grid {
                 grid-template-columns: repeat(4, 1fr);
@@ -178,6 +178,79 @@
             margin-top: 30px;
             color: #777;
             font-size: 0.9em;
+        }
+
+                /* Image Gallery Styles */
+        .image-gallery {
+            overflow: hidden;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .gallery-track {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            scrollbar-width: thin;
+        }
+
+        .gallery-track::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery-track::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .gallery-track::-webkit-scrollbar-thumb {
+            background: #4CAF50;
+            border-radius: 10px;
+        }
+
+        .gallery-item {
+            flex: 0 0 180px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-bottom: 3px solid #4CAF50;
+        }
+
+        .gallery-item p {
+            margin: 8px 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .gallery-item p strong {
+            color: #27ae60;
+            font-size: 1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .gallery-item {
+                flex: 0 0 150px;
+            }
+            .gallery-item img {
+                height: 120px;
+            }
         }
     </style>
 </head>
@@ -224,6 +297,53 @@
 
         <p style="text-align: center; font-style: italic; margin-top: 20px;">
             "Small actions, when multiplied by millions, can transform the world." – Howard Zinn
+        </p>
+    </div>
+
+        <!-- Image Gallery Section -->
+    <div class="education">
+        <h2>Visual Guide to Waste Sorting</h2>
+        <p>See real examples of common waste items and how to sort them.</p>
+        
+        <div class="image-gallery">
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <img src="images/plastic-bottle.jpeg" alt="Plastic Bottle - Recyclable">
+                    <p>Plastic Bottle<br><strong>Recyclable</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/food-scraps.jpeg" alt="Food Scraps - Organic">
+                    <p>Food Scraps<br><strong>Organic</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/battery.jpeg" alt="Battery - Hazardous">
+                    <p>Battery<br><strong>Hazardous</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/old-phone.jpeg" alt="Old Phone - E-Waste">
+                    <p>Old Phone<br><strong>E-Waste</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/diaper.jpeg" alt="Diaper - General Waste">
+                    <p>Diaper<br><strong>General Waste</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/cardboard.jpeg" alt="Cardboard - Recyclable">
+                    <p>Cardboard<br><strong>Recyclable</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/glass-bottle.png" alt="Glass Bottle - Recyclable">
+                    <p>Glass Bottle<br><strong>Recyclable</strong></p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/medical-waste.jpeg" alt="Medical Waste - Hazardous">
+                    <p>Medical Waste<br><strong>Hazardous</strong></p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; font-size: 0.9em; color: #555; margin-top: 15px;">
+            Scroll horizontally to see more →
         </p>
     </div>
 
