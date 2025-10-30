@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recyclo - Waste Disposal Guide</title>
+
+    <!-- FAVICON (Browser Tab Icon) -->
+    <link rel="icon" href="images/browser-logo.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="images/browser-logo.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="images/browser-logo.png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -219,9 +224,36 @@
         }
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
+            padding: 20px 15px;
             color: #777;
             font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        footer .logo {
+            display: block;
+            margin: 0 auto 12px auto;
+            height: 45px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            footer {
+                padding: 15px 10px;
+                font-size: 0.85em;
+            }
+            footer .logo {
+                height: 38px;
+            }
+        }
+        footer span {
+            color: #4CAF50;
+            font-weight: bold;
         }
 
         /* Image Gallery Styles */
@@ -286,11 +318,32 @@
             color: #27ae60;
             font-size: 1em;
         }
+        /* Logo Styling */
+        .logo {
+            height: 60px;
+            width: auto;
+            margin: 10px 0;
+        }
+        header .logo {
+            height: 50px;
+            margin-bottom: 5px;
+        }
+        footer .logo {
+            height: 40px;
+            margin-top: 10px;
+        }
+
+        /* Responsive Logo */
+        @media (max-width: 600px) {
+            .logo { height: 45px; }
+            header .logo { height: 40px; }
+            footer .logo { height: 35px; }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Recyclo</h1>
+        <img src="images/logo-transparent.png" alt="Recyclo Logo" class="logo">
         <p>Sustainable Waste Disposal Guide for Ugandan Cities</p>
     </header>
 
@@ -319,7 +372,7 @@
     <!-- Educational Section -->
     <div class="education">
         <h2>Why Proper Waste Disposal Matters</h2>
-        <p><strong>Recyclo</strong> is more than a tool — it's a step toward a cleaner, healthier Uganda.</p>
+        <p><strong>Recyclo</strong> is more than a tool, it's a step toward a cleaner, healthier Uganda.</p>
         
         <ul>
             <li><strong>Reduces Landfill Waste:</strong> Uganda generates over 3,000 tons of waste daily.</li>
@@ -424,7 +477,14 @@
     </div>
 
     <footer>
-        &copy; 2025 Recyclo. Built for Uganda's Future
+    <div style="text-align: center; margin-bottom: 10px;">
+        <img src="images/logo-transparent.png" alt="Recyclo Logo" class="logo">
+    </div>
+        <p style="margin: 0; font-size: 0.9em; color: #777;">
+            &copy; 2025 Recyclo. Built for Uganda's Future by 
+            <span style="color: #4CAF50; font-weight: bold;">Avril Kankunda</span> & 
+            <span style="color: #4CAF50; font-weight: bold;">Husna Nsimenta Atcar</span>.
+        </p>
     </footer>
 
     <!-- QR Code Library -->
